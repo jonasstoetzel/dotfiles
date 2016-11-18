@@ -23,6 +23,7 @@
         unmerged = branch --all --verbose --no-merged
         unstage = reset HEAD
         update = remote update
+	remotes = remote -v
 
         # shortcuts
         ci = !git checkin
