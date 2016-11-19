@@ -97,3 +97,5 @@ alias po="poweroff"
 alias GDSerial="python ~/Python/GDSerial.py"
 alias esptool="python2 ~/git/esptool/esptool.py"
 alias serial="picocom /dev/ttyUSB0 -b 115200"
+alias gitdir="cd /home/jonas/git"
+alias wttr='curl wttr.in/siegen'
