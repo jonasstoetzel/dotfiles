@@ -62,11 +62,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+    export EDITOR='vim'
+else
+    export EDITOR='mvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -99,3 +99,19 @@ alias esptool="python2 ~/git/esptool/esptool.py"
 alias serial="picocom /dev/ttyUSB0 -b 115200"
 alias gitdir="cd /home/jonas/git"
 alias wttr='curl wttr.in/siegen'
+alias ..='cd ..'
+alias pm='sudo pacman -Syu'
+alias l='ls -ahl'
+alias adb='/home/jonas/adb/platform-tools/adb'
+alias fastboot='sudo /home/jonas/adb/platform-tools/fastboot'
+alias r='ranger'
+alias vrc='vim ~/.vimrc'
+
+function cptv(){
+	sshpass -p "libreelec" scp -r $1 root@libreelec:/media/Festi
+}	
+
+export $EDITOR=vim
+
+set -o vi
+
